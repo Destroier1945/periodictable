@@ -462,7 +462,7 @@
             "electron_configuration": "1s2 2s2 2p6",
             "electron_configuration_semantic": "[He] 2s2 2p6",
             "electron_affinity": -116,
-            "electronegativity_pauling": "null",
+            "electronegativity_pauling": 0,
             "ionization_energies": [
                 2080.7,
                 3952.3,

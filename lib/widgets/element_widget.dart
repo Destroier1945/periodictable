@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:periodictable/models/element_model.dart';
 
 class ElementWidget extends StatelessWidget {
-  final ElementsModel elements;
+  //final String atomicMass;
+  //final String number;
+  //final String symbol;
+  //final String name;
 
-  const ElementWidget({super.key, required this.elements});
+  const ElementWidget({
+    super.key,
+    // required this.atomicMass,
+    // required this.name,
+    // required this.number,
+    // required this.symbol
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,23 +26,37 @@ class ElementWidget extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                elements.atomicMass.toString(),
-                style: const TextStyle(fontSize: 10),
+              Flexible(
+                child: Text(
+                  '10.001',
+                  // atomicMass.toString(),
+                  //  style: const TextStyle(fontSize: 10),
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
-              Text(
-                elements.number.toString(),
-                style: const TextStyle(fontSize: 18),
+              Flexible(
+                child: Text(
+                  '1',
+                  //  number.toString(),
+                  //   style: const TextStyle(fontSize: 18),
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
             ],
           ),
-          Text(
-            elements.symbol,
-            style: const TextStyle(fontSize: 30),
+          Flexible(
+            child: Text(
+              'H',
+              // symbol,
+              //   style: const TextStyle(fontSize: 30),
+            ),
           ),
-          Text(
-            elements.name,
-            style: const TextStyle(fontSize: 14),
+          Flexible(
+            child: Text(
+              'Hidrogenio',
+              //  name,
+//style: const TextStyle(fontSize: 14),
+            ),
           )
         ],
       ),

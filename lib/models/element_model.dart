@@ -1,26 +1,3 @@
-class Elements {
-  late List<Elements> elements;
-
-  Elements({required this.elements});
-
-  Elements.fromJson(Map<String, dynamic> json) {
-    if (json['elements'] != null) {
-      elements = <Elements>[];
-      json['elements'].forEach((v) {
-        elements.add(new Elements.fromJson(v));
-      });
-    }
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
-    if (this.elements != null) {
-      data['elements'] = this.elements.map((v) => v.toJson()).toList();
-    }
-    return data;
-  }
-}
-
 class ElementsModel {
   late String name;
   late String appearance;
